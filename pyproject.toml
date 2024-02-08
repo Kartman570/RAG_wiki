@@ -1,0 +1,39 @@
+[tool.poetry]
+name = "rag-wiki"
+version = "0.1.0"
+description = ""
+authors = ["Kartman570 <kotelnikovilya@yandex.ru>"]
+readme = "README.md"
+packages = [{include = "rag_wiki"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+transformers = "^4.37.2"
+sentencepiece = "^0.1.99"
+protobuf = "^4.25.2"
+torch = {version = "^2.2.0+cu121", source = "pytorch"}
+torchvision = {version = "^0.17.0+cu121", source = "pytorch"}
+datasets = "^2.16.1"
+faiss-cpu = "^1.7.4"
+sentence-transformers = "^2.3.1"
+langchain = "^0.1.5"
+pandas = "^2.2.0"
+tiktoken = "^0.5.2"
+huggingface-hub = "^0.20.3"
+langchain-community = "^0.0.17"
+llama-index = "^0.9.45"
+streamlit = "^1.31.0"
+
+
+[tool.poetry.group.dev.dependencies]
+deptry = "^0.12.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+
+[[tool.poetry.source]]
+name = "pytorch"
+url = "https://download.pytorch.org/whl/cu121"
+priority = "supplemental"
